@@ -154,3 +154,15 @@ Route::get('admin/', 'Admin\BrandController@index');
 Route::get('/admin/edit/{id}', 'Admin\BrandController@edit');
 Route::post('/admin/upd/{id}', 'Admin\BrandController@upd');
 Route::post('/admin/destroy/{id}', 'Admin\BrandController@destroy');
+// 管理员
+ Route::get('goods_admin/create','Admin\AdminController@create');
+
+Route::post('goods_admin/store','Admin\AdminController@store');
+
+Route::get('goods_admin','Admin\AdminController@index');
+
+Route::get('goods_admin/edit/{id}','Admin\AdminController@edit');
+
+Route::post('goods_admin/update/{id}','Admin\AdminController@update');
+
+Route::get('goods_admin/destroy/{id}','Admin\AdminController@destroy');
