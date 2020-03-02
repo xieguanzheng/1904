@@ -130,6 +130,7 @@ Route::get('/login','Index\IndexController@login');
 Route::post('/logindo','Index\IndexController@logindo');
 Route::get('/prolist','Index\IndexController@prolist');
 Route::get('/proinfo/{id}','Index\IndexController@proinfo');
+Route::get('/car','Index\IndexController@car');
 
 Route::get('/sendsms','Index\LoginController@sendSms');
 //发送短信
@@ -145,3 +146,11 @@ Route::get('gly/list', 'GlyController@list');
 Route::get('/gly/edit/{id}', 'GlyController@edit');
 Route::post('/gly/upd/{id}', 'GlyController@upd');
 Route::post('/gly/destroy/{id}', 'GlyController@destroy');
+
+//品牌
+Route::get('admin/create', 'Admin\BrandController@create');
+Route::post('admin/adddo', 'Admin\BrandController@adddo');
+Route::get('admin/', 'Admin\BrandController@index');
+Route::get('/admin/edit/{id}', 'Admin\BrandController@edit');
+Route::post('/admin/upd/{id}', 'Admin\BrandController@upd');
+Route::post('/admin/destroy/{id}', 'Admin\BrandController@destroy');

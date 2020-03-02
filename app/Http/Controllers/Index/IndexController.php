@@ -42,9 +42,14 @@ class IndexController extends Controller
      return view('index.prolist',['data'=>$data]);
 }
 //列表详情
-public function proinfo(){
-    $data=Goodss::select('*')->get();
+public function proinfo($id){
+    $data=Goodss::where('shop_id',$id)->first();
     return view('index.proinfo',['data'=>$data]);
+}
+
+public function car(){
+    $data=Goodss::select('*')->get();
+    return view('index.car',['data'=>$data]);
 }
     
 

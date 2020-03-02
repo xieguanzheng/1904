@@ -27,21 +27,20 @@
        <h1>产品详情</h1>
       </div>
      </header>
-      @foreach($data as $v)
      <div id="sliderA" class="slider">
-            <img src="{{env('UPLOAD_URL')}}{{$v->shop_img}}" height="50px" width="50px">
+      <img src="{{env('UPLOAD_URL')}}{{$data->shop_img}}" />
      </div><!--sliderA/-->
      <table class="jia-len">
       <tr>
-       <th><strong class="orange">{{$v->shop_price}}</strong></th>
+       <th><strong class="orange">{{$data->shop_price}}</strong></th>
        <td>
         <input type="text" class="spinnerExample" />
        </td>
       </tr>
       <tr>
        <td>
-        <strong>{{$v->shop_name}}</strong>
-        <p class="hui">{{$v->shop_desc}}</p>
+        <strong>{{$data->shop_name}}</strong>
+        <p class="hui">{{$data->shop_account}}</p>
        </td>
        <td align="right">
         <a href="javascript:;" class="shoucang"><span class="glyphicon glyphicon-star-empty"></span></a>
@@ -57,24 +56,14 @@
       <a href="javascript:;" style="background:none;">订购列表</a>
       <div class="clearfix"></div>
      </div><!--zhaieq/-->
-     <div class="proinfoList">
-      <img src="{{env('UPLOAD_URL')}}{{$v->shop_img}}" width="636" height="822" />
-     </div><!--proinfoList/-->
-     <div class="proinfoList">
-      暂无信息....
-     </div><!--proinfoList/-->
-     <div class="proinfoList">
-      暂无信息......
-     </div><!--proinfoList/-->
      <table class="jrgwc">
       <tr>
        <th>
         <a href="index.html"><span class="glyphicon glyphicon-home"></span></a>
        </th>
-       <td><a href="car.html">加入购物车</a></td>
+       <td><a href="{{url('/car')}}">加入购物车</a></td>
       </tr>
      </table>
-     @endforeach
     </div><!--maincont-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/static/index/js/jquery.min.js"></script>
@@ -84,14 +73,14 @@
     <!--焦点轮换-->
     <script src="/static/index/js/jquery.excoloSlider.js"></script>
     <script>
-		$(function () {
-		 $("#sliderA").excoloSlider();
-		});
-	</script>
+    $(function () {
+     $("#sliderA").excoloSlider();
+    });
+  </script>
      <!--jq加减-->
     <script src="/static/index/js/jquery.spinner.js"></script>
    <script>
-	$('.spinnerExample').spinner({});
-	</script>
+  $('.spinnerExample').spinner({});
+  </script>
   </body>
 </html>
